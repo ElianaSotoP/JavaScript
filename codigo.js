@@ -83,7 +83,4 @@
     document.write(`GRACIAS POR TU PREFERENCIA! <br>`);
  }
 
-
- 
- 
- 
+eliana 
