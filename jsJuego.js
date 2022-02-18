@@ -1,26 +1,28 @@
-/* 
-let nombre = prompt('Hola, Ingresa tu nombre: /* ');
-let edad = parseInt(prompt('Ingresa tu edad'))
-if (edad<18){
-  alert(`${nombre} estás en la edad perfecta para jugar!`)
-  console.log(`${nombre} estás en la edad perfecta para jugar!`)
-} else if (edad<35){
-  alert(`${nombre} debes estar estresado con las labores, asi que este juego es ideal para ti! `)
-  console.log(`${nombre} debes estar estresado con las labores, asi que este juego es ideal para ti! `)
-} else{
-  alert(`${nombre} no te preocupes para este juego no  existe barreras de edad! `)
-  console.log(`${nombre} no te preocupes para este juego no  existe barreras de edad! `)
-}
- 
-alert("HAZ CLICK EN EMPEZAr A JUGAR");  */
 
-//en esta seccion estoy tomando los ID de los colores y tambien del boton empezar
+//INTERACTUANDO CON EVENTOS 
+const parentElemnet = document.getElementById("ContentDataPlayer")
+const inputNombre = document.getElementById("inputNombre");
+const parrafoNombre = document.createElement("p")
+parentElemnet.appendChild(parrafoNombre) 
+const accion = (e) => {
+e.preventDefault()
+parrafoNombre.innerHTML = `Hola ${inputNombre.value} dale click en  Empezar a jugar!`
+  
+}
+parentElemnet.addEventListener('click', accion)
+
+
+
+
+//En esta sección estoy tomando los ID de los colores y tambien del boton empezar
 const celeste = document.getElementById("celeste");
 const violeta = document.getElementById("violeta");
 const naranja = document.getElementById("naranja");
 const verde = document.getElementById("verde");
 const btnEmpezar = document.getElementById("btnEmpezar");
 
+
+//AGREGANDO EVENTOS 
 class Juego {
   constructor() {
     this.inicializar();
