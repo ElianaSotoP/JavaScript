@@ -1,29 +1,35 @@
 body {
   padding: 0 20px;
-  margin: 0;
+  margin: 50px 0;
   background: #dedede;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   font-family: roboto;
 }
-
+.titulo {
+  text-align:center;
+  padding-top:10px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #e66de9;
+  color: #ffffff;
+}
 .gameboard {
-  height: 100vh;
-  width: 100vh;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  max-height: 60vh;
-  max-width: 60vh;
-margin-top: 60px;
+  /* max-height: 60rem;
+  max-width: 60rem;  */
+  margin-top: 60px;
 }
 
 .color {
   width: 50%;
   height: 50%;
-  display: inline-block;
+  display: flex;
 }
 
 .left {
@@ -67,16 +73,35 @@ margin-top: 60px;
 }
 
 .btn-start {
-  width: 400px;
-  height: 100px;
+  width: 20rem;
+  height: 4rem;
   background: #ecf0f1;
   color: #2c3e50;
-  font-size: 2.5rem;
+  font-size: 2rem;
   position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 200px);
+  top: calc(90% - 50px);
+  left: calc(52.65% - 200px);
+  border-radius:5px;
 }
 
 .hide {
   display: none;
+}
+.rosado {
+  background-color: #d6c4ff;
+}
+.verdecito {
+  background-color: #deffd2;
+}
+.amarillo {
+  background-color: #fcfeae;
+}
+.naranjaClaro {
+  background-color: #fff3c3;
+}
+.verdeClaro {
+  background-color: #e5fff6;
+}
+.celesteBebe {
+  background-color: #ecf8ff;
 }
