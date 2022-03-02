@@ -192,6 +192,7 @@ class Juego {
         this.nivel++;
         //this.eliminarEventosClick()
 
+      //OPERADOR AVANZADO(operador ternario)
        this.nivel === ULTIMO_NIVEL + 1 ?  this.ganoElJuego():setTimeout(this.siguienteNivel, 1500);
         /* if (this.nivel === ULTIMO_NIVEL + 1) {
           //GANO
