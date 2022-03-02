@@ -83,6 +83,7 @@ const ULTIMO_NIVEL = 10;
 
 class Juego {
   constructor() {
+    this.inicializar = this.inicializar.bind(this)
     this.inicializar();
     this.generarSecuencia();
     setTimeout(this.siguienteNivel, 500);
@@ -91,17 +92,27 @@ class Juego {
   inicializar() {
     this.siguienteNivel = this.siguienteNivel.bind(this);
     this.elegirColor = this.elegirColor.bind(this);
-    btnEmpezar.classList.add("hide");
+    this.toggleBtnEmpezar()
+    //btnEmpezar.classList.add("hide");
     //Para el nivel del juego
     this.nivel = 1;
     //DEFINIR DE MANERA GLOBAL ---
     this.colores = {
+      //OPERADOR AVANZADO
       //celeste: celeste,
       celeste,
       violeta,
       naranja,
       verde,
     };
+  }
+  toggleBtnEmpezar(){
+    if (btnEmpezar.classList.contains('hide')){
+      btnEmpezar.classList.remove('hide');
+
+    }else{
+      btnEmpezar.classList.add('hide');
+    }
   }
   generarSecuencia() {
     //definiendo la secuencia internamente e un atributo del juego
@@ -176,18 +187,35 @@ class Juego {
     if (numeroColor === this.secuencia[this.subnivel]) {
       this.subnivel++;
       if (this.subnivel === this.nivel) {
+        //OPERADOR AVANZADO 
+        //this.nivel=this.nivel+1
         this.nivel++;
         //this.eliminarEventosClick()
-        if (this.nivel === ULTIMO_NIVEL + 1) {
+
+       this.nivel === ULTIMO_NIVEL + 1 ?  this.ganoElJuego():setTimeout(this.siguienteNivel, 1500);
+        /* if (this.nivel === ULTIMO_NIVEL + 1) {
           //GANO
+          this.ganoElJuego()
         } else {
           setTimeout(this.siguienteNivel, 1500);
-        }
+        } */
       }
     } else {
       //perdio
+      this.perdioElJuego()
     }
   }
+  ganoElJuego(){
+  swal('YES','GANASTE! 🎉😃','success')
+  .then(this.inicializar)
+  }
+  perdioElJuego(){
+    swal('OH NO!','lo lameto, perdiste 😢','error')
+    .then(()=>{
+        this.eliminarEventosClick();
+        this.inicializar()
+    })
+    }
 }
 //Esta funcion se ejecuta despues de haber dado click en empezar juegar
 function empezarJuego() {
