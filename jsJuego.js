@@ -79,14 +79,14 @@ const violeta = document.getElementById("violeta");
 const naranja = document.getElementById("naranja");
 const verde = document.getElementById("verde");
 const btnEmpezar = document.getElementById("btnEmpezar");
-const ULTIMO_NIVEL = 10;
+const ULTIMO_NIVEL = 2;
 
 class Juego {
   constructor() {
     this.inicializar = this.inicializar.bind(this)
     this.inicializar();
     this.generarSecuencia();
-    setTimeout(this.siguienteNivel, 500);
+    setTimeout(this.siguienteNivel, 1000);
   }
 
   inicializar() {
@@ -157,7 +157,7 @@ class Juego {
   iluminarSecuencia() {
     for (let i = 0; i < this.nivel; i++) {
       const color = this.transformarNumeroAColor(this.secuencia[i]);
-      setTimeout(() => this.iluminarColor(color), 1000 * i);
+      setTimeout(() => this.iluminarColor(color), 1900 * i);
     }
   }
   iluminarColor(color) {
@@ -192,6 +192,12 @@ class Juego {
         this.nivel++;
         //this.eliminarEventosClick()
 
+
+         //-----------------------AGREGANDO LA LIBRERIA SWEET ALERT PARA MOSTAR AL USUARIO QUE PASO AL SIGUINTE NIVEL----------------
+        swal('En Hora Buena!!',`Pasaste al ${this.nivel} Nivel! 🎉😃`,'success')
+
+
+
       //OPERADOR AVANZADO(operador ternario)
        this.nivel === ULTIMO_NIVEL + 1 ?  this.ganoElJuego():setTimeout(this.siguienteNivel, 1500);
         /* if (this.nivel === ULTIMO_NIVEL + 1) {
@@ -199,7 +205,10 @@ class Juego {
           this.ganoElJuego()
         } else {
           setTimeout(this.siguienteNivel, 1500);
+
         } */
+
+       
       }
     } else {
       //perdio
@@ -207,10 +216,12 @@ class Juego {
     }
   }
   ganoElJuego(){
-  swal('YES','GANASTE! 🎉😃','success')
+  //-----------------------AGREGANDO LA LIBRERIA SWEET ALERT PARA MOSTAR AL USUARIO QUE GANO EL JUEGO----------------
+  swal(`FELICIDADES ${inputNombre.value}`,'GANASTE! 🎉😃','success')
   .then(this.inicializar)
   }
   perdioElJuego(){
+     //-----------------------AGREGANDO LA LIBRERIA SWEET ALERT PARA MOSTAR AL USUARIO QUE PERDIO----------------
     swal('OH NO!','lo lameto, perdiste 😢','error')
     .then(()=>{
         this.eliminarEventosClick();
