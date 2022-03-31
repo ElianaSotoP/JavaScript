@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #eff3ff;
+}
+nav {
+ 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 0 40px;
+}
+button {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#container {
+  padding: 50px 0;
+  display: grid;
+  max-width: 100%;
+  grid-gap: 60px;
+  margin: 50px auto 0;
+  width: 95%;
+  grid-auto-rows: 320px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.card {
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-image: linear-gradient(to right bottom, #d5c971, #dbc473, #e0c076, #e4bc7a, #e6b87f, #e7ba79, #e7bd74, #e7c06e, #dbcd5f, #c4dd58, #9fec5e, #5ffb73);
+
+}
+.card img {
+  display: block;
+  width: 180px;
+  max-height: 200px;
+  position: relative;
+  margin: 20px auto;
+}
+.poke-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+.types {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px 0;
+}
+.hp span,
+.types span {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+.types span {
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: rgb(48, 51, 107);
+}

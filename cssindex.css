@@ -1,0 +1,71 @@
+
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+   margin: 50px 0;
+  background-image: linear-gradient(to right bottom, #d5c971, #dbc473, #e0c076, #e4bc7a, #e6b87f, #e7ba79, #e7bd74, #e7c06e, #dbcd5f, #c4dd58, #9fec5e, #5ffb73);
+ 
+  object-fit: cover;
+  
+}
+.titulo {
+  text-align:center;
+  padding-top:10px;
+  height: 70px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom:50px;
+
+}
+section{
+  display:flex;
+  justify-content: center;
+}
+.pikachu{
+ 
+  display: flex;
+  align-items: flex-start;
+  width: 400px;
+  height: 400px;
+}
+.contentDataPlayer{
+width:300px;
+}
+.letra-formulario{
+  font-family: 'Press Start 2P', cursive;
+ font-size: 20px;
+}
+.edad{
+  margin-bottom:10px;
+}
+.btn-dark{
+  font-family: 'VT323', monospace;
+  font-size:25px;
+  margin-bottom:20px;
+
+}
+.botooooooon{
+  display: flex;
+  margin-left: 100px;
+}
+
+.btn-index{
+width: 300px;
+height: 80px;
+  display:flex;
+  justify-content: center;
+  margin-left: 700px;
+  font-family: 'VT323', monospace;
+  font-size: 40px;
+
+}
+.btn-index a{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+
+}

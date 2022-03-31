@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>ElianaJuego</title>
+
+    <link rel="stylesheet" href="./cssJuego.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body id="fondo">
+    <h1 class="titulo">ESTÁS A PUNTO DE DESCUBRIR TUS POKEMONES</h1>
+    <!-- SECCION CAMBIO DE COLORES DE FONDO -->
+    <div class="container mt-5">
+      <button class="btn btn-dark" id="BtnBotones">
+       Dame click y elige <br> el color que mas te guste 🐥
+      </button>
+    </div>
+    <div class="container mt-5" id="botones"></div>
+
+    <div class="gameboard">
+      <div id="celeste" class="color celeste left" data-color="celeste"></div>
+      <div id="violeta" class="color violeta right" data-color="violeta"></div>
+      <div id="naranja" class="color naranja left" data-color="naranja"></div>
+      <div id="verde" class="color verde right" data-color="verde"></div>
+      <button id="btnEmpezar" class="btn btn-start" onclick="empezarJuego()">
+        EMPEZAR A JUGAR!
+      </button>
+      
+    </form>
+    </div>
+    <button id="pokemon-btn" class="btn-pokemon " id="button" onclick="irPokemon()"> Obtener Pokemon </a></button>
+    
+    <!-- SCRIPT DE LA LIBRERIA SWEET ALERT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <!-- SCRIPT DEL BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./declaracionConstantes.js"></script>
+    <script src="./jsJuego.js"></script>
+  </body>
+</html>
